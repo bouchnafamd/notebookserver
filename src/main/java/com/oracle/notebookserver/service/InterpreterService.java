@@ -26,7 +26,7 @@ public class InterpreterService {
 	private InterpreterContainer interpreterContainer;
 
 	private void validateCodeExpression(@NotNull String codeExpression) throws CodeExpressionNotValidException {
-		boolean expressionIsValid = Pattern.matches("%\\S*\\S.+", codeExpression);
+		boolean expressionIsValid = Pattern.matches("%\\S*\\s.+", codeExpression);
 		if (!expressionIsValid) {
 			throw new CodeExpressionNotValidException();
 		}
